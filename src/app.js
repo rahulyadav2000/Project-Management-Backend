@@ -25,9 +25,11 @@ app.use(
 // import the routes
 import router from "./routes/healthcheck.routes.js";
 import authRouter from "./routes/auth.routes.js";
+import projectRoute from "./routes/project.routes.js";
 
 app.use("/api/v1/healthcheck", router);
 app.use("/api/v1/auth", authRouter);
+app.use("/api/v1/project", projectRoute);
 
 app.get("/", (req, res) => {
   res.send("Hello World");
